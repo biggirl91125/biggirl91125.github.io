@@ -964,9 +964,9 @@ span.sb-caret { /* Caret Down */
 }
 #hero h2 {
 	color: #151515;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	display: inline-block;
-	padding: 14px;
+	/*padding: 14px;*/
 }
 #hero p {
 	color: #333;
