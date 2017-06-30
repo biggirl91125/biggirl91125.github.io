@@ -293,9 +293,6 @@ blockquote footer {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.col-sm-8{
-		float:right;
-	}
 }
 ::selection {
 	color: #ffffff;
@@ -967,8 +964,8 @@ span.sb-caret { /* Caret Down */
 }
 #hero h2 {
 	color: #fff;
-	/*margin-bottom: 20px;*/
-	/*padding: 14px;*/
+	margin-bottom: 20px;
+	padding: 14px;
 }
 #hero p {
 	color: #fff;
