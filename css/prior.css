@@ -1,4 +1,10 @@
 /*布局调整*/
+#intro .col-md-8 span.post-meta{
+    display:block;
+    line-height:12px;
+    margin-bottom:20px;
+    color:#000;
+}
 .col-md-8 p{
     text-indent:30px;
 }
