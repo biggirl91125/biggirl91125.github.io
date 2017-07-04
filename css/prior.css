@@ -10,5 +10,5 @@
 .code-area .code{color:#cccccc;}
 .code-area .code span[class*=html-]{color:green;}
 .code-area .html-note span{color:#d4d4d4;}
-#intro p a{text-decoration: underline;}
+#intro p a{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
