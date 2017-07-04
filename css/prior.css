@@ -4,3 +4,10 @@
 #statement p.state{font-style:normal;font-size:18px;}
 #statement p.e-mail{font-size:14px;}
 .sb-slidebar .sb-menu a{text-transform:none}
+
+/*code style*/
+.code-area{border:1px solid #d4d4d4;font-size:14px;}
+.code-area .code{}
+.code-area .code span[class*=html-]{color:#d0e69c;}
+.code-area .html-note span[class*=html-]{color:#d4d4d4}
+#intro p a{text-decoration: underline;}
