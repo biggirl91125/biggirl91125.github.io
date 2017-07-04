@@ -6,8 +6,9 @@
 .sb-slidebar .sb-menu a{text-transform:none}
 
 /*code style*/
-.code-area{border:1px solid #d4d4d4;font-size:14px;}
-.code-area .code{}
-.code-area .code span[class*=html-]{color:#d0e69c;}
-.code-area .html-note span[class*=html-]{color:#d4d4d4}
+.code-area{border:1px solid #d4d4d4;font-size:12px;}
+.code-area .code{color:#cccccc;}
+.code-area .code span[class*=html-]{color:green;}
+.code-area .html-note span{color:#d4d4d4;}
 #intro p a{text-decoration: underline;}
+.code-area .html-indent{text-indent:20px;}
