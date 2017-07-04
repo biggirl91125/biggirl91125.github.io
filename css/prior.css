@@ -9,3 +9,5 @@
 .col-md-8 p{
     text-indent:30px;
 }
+#statement p.state{font-style:normal;}
+#statement p.e-mail{font-size:14px;}
