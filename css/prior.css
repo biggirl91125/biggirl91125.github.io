@@ -1,0 +1,14 @@
+/*布局调整*/
+#intro .col-md-8 span.post-meta{display:block;line-height:12px;margin-bottom:20px;color:#000;font-size:12px; }
+.col-md-8 p{text-indent:30px;}
+#statement p.state{font-style:normal;font-size:18px;}
+#statement p.e-mail{font-size:14px;}
+.sb-slidebar .sb-menu a{text-transform:none}
+
+/*code style*/
+.code-area{border:1px solid #d4d4d4;font-size:12px;}
+.code-area .code{color:#cccccc;}
+.code-area .code span[class*=html-]{color:green;}
+.code-area .html-note span{color:#d4d4d4;}
+#intro p a{text-decoration: underline;display:block;}
+.code-area .html-indent{text-indent:20px;}
