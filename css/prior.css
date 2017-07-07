@@ -1,4 +1,5 @@
 /*布局调整*/
+ul,ol,dl{list-style: none;}
 #hero h2.motto{color:#fff;}
 #hero p.purpose{color:#fff;font-size:20px;display:block;}
 #intro .col-md-8 span.post-meta{display:block;line-height:12px;margin-bottom:20px;color:#000;font-size:12px; }
@@ -14,3 +15,6 @@
 .code-area .html-note span{color:#d4d4d4;}
 #intro p a.tul{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
+
+.category-list-count:before{content:'(';}
+.category-list-count:after{content:')';}
