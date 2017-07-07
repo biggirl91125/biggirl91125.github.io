@@ -16,5 +16,8 @@ ul,ol,dl{list-style: none;}
 #intro p a.tul{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
 
+.sb-submenu ul{margin-left:-35px;}
+.category-list li:before{content:'>';}
+.sb-submenu .category-list .category-list-item a{display:inline;}
 .category-list-count:before{content:'(';}
 .category-list-count:after{content:')';}
