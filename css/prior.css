@@ -16,8 +16,11 @@ ul,ol,dl{list-style: none;}
 #intro p a.tul{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
 
-.sb-submenu ul{margin-left:-35px;}
-.category-list li:before{content:'>';}
+.sb-submenu ul{margin-left:-10px;}
 .sb-submenu .category-list .category-list-item a{display:inline;}
+.sb-submenu .category-list{margin-left:-40px;}
 .category-list-count:before{content:'(';}
 .category-list-count:after{content:')';}
+
+.sb-menu li a{padding:0 5px;}
+.sb-right .sb-menu li a:hover{border-left:2px solid;}
