@@ -6,7 +6,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>前端js与ios交互 | Judy&#39;s blog</title>
+  <title>前端js与webview交互 | Judy&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -75,11 +75,11 @@
 				    <!---->
 				    <!--<li><a href="/categories/Work-diary/" class="animsition-link">Work diary<small>(5)</small></a></li>-->
 				    <!---->
-				    <!--<li><a href="/categories/Work-diary/移动端开发的那些坑儿/" class="animsition-link">移动端开发的那些坑儿<small>(1)</small></a></li>-->
+				    <!--<li><a href="/categories/Work-diary/移动端开发那些坑儿/" class="animsition-link">移动端开发那些坑儿<small>(1)</small></a></li>-->
 				    <!---->
 				    <!--<li><a href="/categories/Work-diary/脚踏实地/" class="animsition-link">脚踏实地<small>(2)</small></a></li>-->
 				    <!---->
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Chicken-soup/">Chicken soup</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/">Work diary</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/移动端开发的那些坑儿/">移动端开发的那些坑儿</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/脚踏实地/">脚踏实地</a><span class="category-list-count">2</span></li></ul></li></ul>
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Chicken-soup/">Chicken soup</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/">Work diary</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/移动端开发那些坑儿/">移动端开发那些坑儿</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/脚踏实地/">脚踏实地</a><span class="category-list-count">2</span></li></ul></li></ul>
 				</ul>
         	</li>
 			
@@ -165,17 +165,32 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>前端js与ios交互</h1>
-                <span class="post-meta"><time datetime="2017-07-25T11:56:58.000Z" itemprop="datePublished">2017-07-25</time></span>
+                <h2>前端js与webview交互</h2>
+                <span class="post-meta"><time datetime="2017-08-11T06:59:05.000Z" itemprop="datePublished">2017-08-11</time></span>
+                <p>想弄明白一个问题感觉就像探究一个哲学问题一样要追本溯源，虽然有点夸张，但是我们确实需要有点耐心去知其所以然，否则问题只能浮于表面。</p>
+                <h3>1、什么是webview?</h3>
+                <p>A view that displays web pages.This class is the basis upon which you can roll your own web browser or simply display some online content within your activity.It uses the WebKit rendering engine to display web pages and includes methods to navigate forward and backward through a history,zoom in and out,perform text searches and more.</p>
+                <p>Webview是用来展示网页的一个组件，基于此组件，你可以运行自己的浏览器，或者在你的线程中展示线上内容。它使用Webkit渲染引擎展示网页，并支持前进后退、放大缩小、文本搜索等功能。总的来说，我们可以将webview理解为移动端应用中的一种特殊的浏览器。</p>
+                <p>这里放段英文定义并不是为了狂拽酷，是想要大家看到其未经加工的最原始的定义。如果看到英文就头疼，请忽略。</p>
+                <h3>2、webview如何运行?</h3>
+                <p>1)普通浏览器的运行：</p>
+                <p><img src=""></p>
+                <p>2)webview的运行：</p>
+                <p><img src=""></p>
             </div>
             <div class="individual-right">
-                <div class="calendar-widget"></div>
-                <div class="blossom-widget">
-                    <canvas id="canvasGL" width="" height=""></canvas>
-                </div>
+                <div class="calendar-widget">
+    
+</div>
+<div class="blossom-widget">
+    <canvas id="canvasGL" width="" height=""></canvas>
+</div>
+
+
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
+      		
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
