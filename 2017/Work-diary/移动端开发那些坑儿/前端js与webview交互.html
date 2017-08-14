@@ -164,7 +164,7 @@
 <section id="intro">
     <div class="container">
         <div class="row col-md-offset-2">
-            <div class="col-md-8">
+            <p class="col-md-8">
                 <h2>前端js与webview交互</h2>
                 <span class="post-meta"><time datetime="2017-08-11T06:59:05.000Z" itemprop="datePublished">2017-08-11</time></span>
                 <p>想弄明白一个问题感觉就像探究一个哲学问题一样要追本溯源，虽然有点夸张，但是我们确实需要有点耐心去知其所以然，否则问题只能浮于表面。</p>
@@ -177,6 +177,78 @@
                 <p><img src=""></p>
                 <p>2)webview的运行：</p>
                 <p><img src=""></p>
+                <h3>3、两者交互</h3>
+                <p>Native调用JS，相对简单，可直接调用；由于Native处于webview外部，JS不能直接调用Native，本质上需要UIWebview的代理方法进行字段拦截（判断url的scheme）间接调用。</p>
+                <p>1)Android&JS</p>
+                <p>&gt;android调用js</p>
+                <p>
+                    <div class="code-area">
+                        <ol class="code">
+                            <li>webSettings.setJavaScriptEnabled(true);</li>
+                            <li>mWebView.loadUrl("javascript:jsFunc()");</li>
+                        </ol>
+                    </div>
+                </p>
+                <p>&gt;js调用android</p>
+                <p>
+                    <div class="code-area">
+                        <ol class="code">
+                            <li>//方法一：兼容性不好，此方法在Android 4.2之前存在安全漏洞，需声明@JavascriptInterface</li>
+                            <li>webSettings.setJavaScriptEnabled(true);</li>
+                            <li>mWebView.addJavascriptInterface(new DemoJavaScriptInterface(), "demo");</li>
+                        </ol>
+                        <ol class="code">
+                            <li>//方法二：拦截webview所有url跳转，可构造特殊格式url进行逻辑区分</li>
+                            <li>WebViewClient.shouldOverrideUrlLoading()</li>
+                        </ol>
+                        <ol class="code">
+                            <li>//方法三：Android提供给Js调试在Native代码里面打印日志信息的API</li>
+                            <li>WebChromeClient.onConsoleMessage()</li>
+                        </ol>
+                        <ol class="code">
+                            <li>//方法四：JS中调用window.prompt(message, value)，回调WebChromeClient.onJsPrompt()</li>
+                            <li>WebChromeClient.onJsPrompt()</li>
+                        </ol>
+                    </div>
+                </p>
+                <p>2)IOS&JS</p>
+                <p>&gt;ios调用js</p>
+                <p>
+                    <div class="code-area">
+                        <ol class="code">
+                            <li>//ios可以直接通过webview属性调用，将js代码当做字符串读出再解析</li>
+                            <li>NSString * result = [self.webView stringByEvaluatingJavaScriptFromString:@"myFunc()"];</li>
+                        </ol>
+                    </div>
+                </p>
+                <p>&gt;js调用ios</p>
+                <p>
+                    <div class="code-area">
+                        <ol class="code">
+                            <li>//ios通过iframe加载url调用webview的delegate的指定方法处理url</li>
+                            <li> NSString *js = @"(function() {</li>
+                            <li> window.JSBridge = {};</li>
+                            <li> window.JSBridge.callFunction = function(functionName, args){</li>
+                            <li> var url = \"bridge-js://invoke?\";</li>
+                            <li> var callInfo = {};</li>
+                            <li> callInfo.functionname = functionName;</li>
+                            <li> if (args)</li>
+                            <li> {</li>
+                            <li> callInfo.args = args;</li>
+                            <li> }</li>
+                            <li> url += JSON.stringify(callInfo);</li>
+                            <li> var rootElm = document.documentElement;</li>
+                            <li> var iFrame = document.createElement(\"IFRAME\");</li>
+                            <li> iFrame.setAttribute(\"src\",url);</li>
+                            <li> rootElm.appendChild(iFrame);</li>
+                            <li> iFrame.parentNode.removeChild(iFrame);</li>
+                            <li> };</li>
+                            <li> return true;</li>
+                            <li> })();";</li>
+                            <li> [webView stringByEvaluatingJavaScriptFromString:js];</li>
+                        </ol>
+                    </div>
+                </p>
             </div>
             <div class="individual-right">
                 <div class="calendar-widget">
