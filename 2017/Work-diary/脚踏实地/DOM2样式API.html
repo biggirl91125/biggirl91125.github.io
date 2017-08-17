@@ -6,7 +6,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>编码规范之HTML | Judy&#39;s blog</title>
+  <title>DOM2样式API | Judy&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -73,13 +73,13 @@
 				    <!---->
 				    <!--<li><a href="/categories/Chicken-soup/" class="animsition-link">Chicken soup<small>(2)</small></a></li>-->
 				    <!---->
-				    <!--<li><a href="/categories/Work-diary/" class="animsition-link">Work diary<small>(5)</small></a></li>-->
+				    <!--<li><a href="/categories/Work-diary/" class="animsition-link">Work diary<small>(6)</small></a></li>-->
 				    <!---->
-				    <!--<li><a href="/categories/Work-diary/移动端开发的那些坑儿/" class="animsition-link">移动端开发的那些坑儿<small>(1)</small></a></li>-->
+				    <!--<li><a href="/categories/Work-diary/移动端开发那些坑儿/" class="animsition-link">移动端开发那些坑儿<small>(1)</small></a></li>-->
 				    <!---->
-				    <!--<li><a href="/categories/Work-diary/脚踏实地/" class="animsition-link">脚踏实地<small>(2)</small></a></li>-->
+				    <!--<li><a href="/categories/Work-diary/脚踏实地/" class="animsition-link">脚踏实地<small>(3)</small></a></li>-->
 				    <!---->
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Chicken-soup/">Chicken soup</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/">Work diary</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/移动端开发的那些坑儿/">移动端开发的那些坑儿</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/脚踏实地/">脚踏实地</a><span class="category-list-count">2</span></li></ul></li></ul>
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Chicken-soup/">Chicken soup</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/">Work diary</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/移动端开发那些坑儿/">移动端开发那些坑儿</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-diary/脚踏实地/">脚踏实地</a><span class="category-list-count">3</span></li></ul></li></ul>
 				</ul>
         	</li>
 			
@@ -165,59 +165,59 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h2>编码规范之HTML</h2>
-                <span class="post-meta"><time datetime="2017-07-07T03:26:24.000Z" itemprop="datePublished">2017-07-07</time></span>
-                <p>磨刀不误砍柴工，我们需要静下心来扎实一下基本功。</p>
-                <h3>1、语法</h3>
-                <p>
-                <ul>
-                    <li>用两个空格替代制表符(Tab)，保证适用所有环境</li>
-                    <li>属性定义使用双引号，切勿使用单引号</li>
-                    <li>自闭合(Self-closing)元素无需在尾部添加斜线</li>
-                </ul>
-                </p>
-                <h3>2、HTML5 DOCTYPE</h3>
-                <p>
-                    为每个HTML页的第一行添加标准模式(Standard Mode)的声明,确保浏览器解析一致。
-                </p>
-                <p>
-                <div class="code-area">
-                    <ol class="code">
-                        <li><span class="html-lt"><</span><span class="html-doc">!DOCTYPE html</span><span class="html-gt">></span></li>
-                        <li><span class="html-lt"><</span><span class="html-h">html</span><span class="html-gt">></span></li>
-                        <li class="html-indent"><span class="html-lt"><</span><span class="html-hd">head</span><span class="html-gt">></span><span class="html-lt"><</span><span class="html-hd">/head</span><span class="html-gt">></span></li>
-                        <li class="html-indent"><span class="html-lt"><</span><span class="html-bd">body</span><span class="html-gt">></span><span class="html-lt"><</span><span class="html-bd">/body</span><span class="html-gt">></span></li>
-                        <li><span class="html-lt"><</span><span class="html-h">/html</span><span class="html-gt">></span></li>
-                    </ol>
-                </div>
-                </p>
-                <h3>3、语言属性</h3>
-                <p>
-                    强烈建议为html根元素指定lang属性,从而为文档设置正确的语言,有助于指导浏览器进行正确行为，如语音合成工具确定其所采用的发音，翻译工具确定其翻译规则。
-                </p>
+                <h2>DOM2样式API</h2>
+                <span class="post-meta"><time datetime="2017-08-16T08:14:58.000Z" itemprop="datePublished">2017-08-16</time></span>
+                <h3>1、style对象</h3>
+                <p>1)基本属性</p>
+                <p>width——el.style.width</p>
+                <p>background-image——el.style.backgroundImage</p>
+                <p>font-family——el.style.fontFamily</p>
+                <p>float——el.style.cssFloat/el.style.styleFloat(IE)</p>
+                <p>注：style对象不包含其他样式表层叠并影响到当前元素的样式</p>
+                <p>2)其他属性&方法</p>
+                <p>cssText</p>
+                <p>getPropertyValue</p>
+                <p>注：两者值相同</p>
+                <h3>2、defaultView.getComputedStyle/currentStyle(IE)</h3>
+                <p>document.defaultView.getComputedStyle(el,伪元素字符串/null)</p>
+                <p>注：getComputedStyle包含所有当前元素的计算样式;综合属性在不同浏览器中展示不同</p>
+                <h3>3、操作样式表</h3>
                 <p>
                 <div class="code-area">
                     <ol class="code">
-                        <li><span class="html-lt"><</span><span class="html-doc">!DOCTYPE html</span><span class="html-gt">></span></li>
-                        <li><span class="html-lt"><</span><span class="html-h">html</span><span class="html-gt">></span></li>
-                        <li class="html-note html-indent"><span class="html-lt"><</span><span>!-- --</span><span class="html-gt">></span></li>
-                        <li><span class="html-lt"><</span><span class="html-h">/html</span><span class="html-gt">></span></li>
+                        <li>//step 1:获取CSSStyleSheet对象</li>
+                        <li>function getStyleSheet(element){</li>
+                        <li>   return element.sheet||element.styleSheet;</li>
+                        <li>}</li>
                     </ol>
                 </div>
                 </p>
-                <p>详细参考：</p>
+                <p>注：document.styleSheets也可以获得CSSStyleSheet对象集合</p>
                 <p>
-                    <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5规范</a>
-                    <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-elementg">HTML5 lang属性</a>
+                <div class="code-area">
+                    <ol class="code">
+                        <li>//step 2:修改css规则</li>
+                        <li>function insertRule(sheet,selectorText,cssText,position){</li>
+                        <li>   if(sheet.insertRule){</li>
+                        <li>       sheet.insertRule(selectorText+'{'+cssText+'}',position);</li>
+                        <li>   }else if(sheet.addRule){</li>
+                        <li>       sheet.addRule(selectorText,cssText,position);</li>
+                        <li>   }</li>
+                        <li>}</li>
+                    </ol>
+                </div>
                 </p>
+                <p>注：删除css规则同理</p>
             </div>
             <div class="individual-right">
                 <div class="calendar-widget">
-                    <div class="cal"></div>
-                </div>
-                <div class="blossom-widget">
+    
+</div>
+<div class="blossom-widget">
+    <canvas id="canvasGL" width="" height=""></canvas>
+</div>
 
-                </div>
+
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
@@ -227,13 +227,9 @@
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/Work-diary/脚踏实地/编码规范之CSS.html" style="float: left;">
-        ← 编码规范之CSS
-    </a>
     
-    
-    <a class="pull-right" href="/2017/Work-diary/CSS/css那些选择器.html">
-        css那些选择器 →
+    <a class="pull-right" href="/2017/Work-diary/移动端开发那些坑儿/前端js与webview交互.html">
+        前端js与webview交互 →
     </a>
     
 </nav>
