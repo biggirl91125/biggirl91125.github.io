@@ -208,6 +208,18 @@
                 </div>
                 </p>
                 <p>注：删除css规则同理</p>
+                <h3>4、元素大小（IE标准）</h3>
+                <p>1)偏移量</p>
+                <p>offsetLeft/offsetTop</p>
+                <p>offsetWidth/offsetHeight</p>
+                <p>注1:想起了IE盒模型，啰嗦两句，IE盒模型计算宽高时包含内边距和边框，开发者设计宽高时，不会影响外部布局，box-sizing属性用来将标准盒模型转化为IE盒模型。</p>
+                <p>注2:偏移量属性为只读，每次访问需重新计算，故重复访问时保存至局部变量以提高性能。</p>
+                <p>2)客户区大小(元素内部大小)</p>
+                <p>clientWidth/clientHeight</p>
+                <p>document.body.clientWidth(混杂)/document.documentElement.clientWidth</p>
+                <p>注1:不包含滚动条大小</p>
+                <p>注2:同偏移量</p>
+                <p>注3:documentElement返回文档的根节点</p>
             </div>
             <div class="individual-right">
                 <div class="calendar-widget">
