@@ -228,8 +228,11 @@
                 <p>4)元素大小</p>
                 <p>getBoundingClientRect():left,top,right,bottom</p>
                 <p>注1:元素相对视口的位置 </p>
-                <p>注2:<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a>指向当前正在执行函数，一般递归调用时使用，但由于arguments本身太大，每次调用时需重新创建，影响浏览器性能和闭包，故被ES5严格模式弃用</p>
-
+                <p>注2:<a class="aHref" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a>指向当前正在执行函数，一般递归调用时使用，但由于arguments本身太大，每次调用时需重新创建，影响浏览器性能和闭包，故被ES5严格模式弃用
+                <h3>遇到的一些术语</h3>
+                <p>尾递归(tail-recursion)：递归调用是整个函数中最后的执行语句且它的返回值不属于表达式的一部分。</p>
+                <p>当编译器检测到一个函数调用是尾递归时，就覆盖当前活动记录而不是在栈中创建一个新的，故一般会将非尾递归转换为迭代或尾递归的形式来减小内存开销。在没有尾递归优化的语言如java、python中，用迭代改写尾递归；有尾递归优化的语言如Erlang中，则可以用尾递归来改写其他形式的递归。</p>
+                <P>REPL(Read-Eval-Print-Loop)：交互式解析器，可以定义和运行变量、函数、对象</P>
             </div>
             <div class="individual-right">
                 <div class="calendar-widget">
@@ -377,6 +380,6 @@ $('#intro').find('img').each(function(){
       });
     });
 </script>
-
+        <script src="js/offset.js"></script>
 </body>
 </html>

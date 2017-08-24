@@ -108,3 +108,12 @@ function getBoundingClientRect_crossBrowser(element){
         getBoundingClientRect_out(element);
     }
 }
+
+//dom2遍历/范围能力检测
+function traversal(){
+    var supportsTraversals=document.implementation.hasFeature("Traversal","2.0");
+    var supportsNodeIterator=typeof document.createNodeIterator == "function";
+    var supportsTreeWalker=typeof document.createTreeWalker == "function";
+
+    var supportsRange=typeof document.createRange == "function";
+}
