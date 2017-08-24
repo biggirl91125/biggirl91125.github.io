@@ -117,3 +117,28 @@ function traversal(){
 
     var supportsRange=typeof document.createRange == "function";
 }
+
+
+//with
+function func() {
+    console.time("func");
+    var obj={
+        a:[1,2,3]
+    };
+    for(var i=0;i<1000;i++){
+        var v=obj.a[0];
+    }
+    console.timeEnd("func");
+}
+function withFunc(){
+    console.time("funcWith");
+    var obj={
+        a:[1,2,3]
+    };
+    with(obj){
+        for(var i=0;i<1000;i++){
+            var v=a[0];
+        }
+    }
+    console.timeEnd("funcWith");
+}
