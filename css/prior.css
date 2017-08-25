@@ -15,7 +15,9 @@ ul,ol,dl{list-style: none;}
 .code-area .html-note span{color:#d4d4d4;}
 #intro p a.tul{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
-
+.code-area .text-indent-1{text-indent:20px;}
+.code-area .text-indent-2{text-indent:40px;}
+.code-area .text-indent-3{text-indent:60px;}
 .sb-submenu ul{margin-left:-10px;}
 .sb-submenu .category-list .category-list-item a{display:inline;}
 .sb-submenu .category-list{margin-left:-40px;}
@@ -24,4 +26,4 @@ ul,ol,dl{list-style: none;}
 
 .sb-menu li a{padding:0 5px;}
 .sb-right .sb-menu li a:hover{border-left:2px solid;}
-.aHref{text-decoration:underline;color:#337ab7;}
+a.aHref{text-decoration:underline;color:#337ab7;}

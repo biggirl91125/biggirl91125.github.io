@@ -192,14 +192,14 @@
                     <div class="code-area">
                         <ol class="code">
                             <li>var obj={</li>
-                            <li>x:10,</li>
-                            <li>foo:function(){</li>
-                            <li>with(this){</li>
-                            <li>var x=20;</li>
-                            <li>var y=30;</li>
-                            <li>console.log(y);</li>
-                            <li>}</li>
-                            <li>}</li>
+                            <li class="text-indent-1">x:10,</li>
+                            <li class="text-indent-1">foo:function(){</li>
+                            <li class="text-indent-2">with(this){</li>
+                            <li class="text-indent-3">var x=20;</li>
+                            <li class="text-indent-3">var y=30;</li>
+                            <li class="text-indent-3">console.log(y);</li>
+                            <li class="text-indent-2">}</li>
+                            <li class="text-indent-1">}</li>
                             <li>};</li>
                             <li>obj.foo();</li>
                             <li>console.log(obj.x);</li>
