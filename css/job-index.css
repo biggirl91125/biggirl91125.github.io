@@ -8,11 +8,11 @@ p.line-cn{font-size:16px;}
 .nick{text-align: center;font-size:18px;padding:10px;}
 .motto{padding:10px;}
 .content-index ul{padding:0;width:200px;margin:10px auto;}
-.nav{text-align: center;}
+.nav{text-align: center;margin:10px 0;}
 .nav>div{display:inline-block;padding:0 8px;height:20px;line-height:20px;}
 .nav .tech{border-right:1px solid #666;}
-.nav a{text-decoration: none;}
-.nav a:hover{text-decoration: underline;}
+.nav a{text-decoration:underline;}
 .relLink{text-align: center;}
-.relLink a{font-size:12px;}
+.relLink a{font-size:12px;text-decoration: none;}
+.relLink a:hover{text-decoration: underline;}
 .git-icon{display:inline-block;width:15px;height:15px;margin-right:5px;vertical-align:middle;background:url("../img/github.png") no-repeat;background-size:100%;}
