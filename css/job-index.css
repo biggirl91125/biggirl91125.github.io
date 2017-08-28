@@ -1,7 +1,10 @@
-.zootopia{float:left;}
-.line-en{}
-.line-cn{}
-.profile{float:right;}
-.avatar{width:50%;}
-.avatar img{border-radius:50%;}
-.nick{text-align: center;}
+#index{margin:5% 15%;}
+.zootopia{float:left;width:100%;padding:50px;}
+.profile{float:left;margin-left:-100%;padding:50px 30px;}
+p.line-en{margin:0;}
+p.line-cn{}
+.avatar{width:150px;height:150px;margin:0 auto;}
+.avatar img{width:100%;height:100%;border-radius:50%;border:2px solid #666;}
+.nick{text-align: center;font-size:18px;padding:10px;}
+.motto{padding:10px;}
+.content-index ul{padding:0;width:200px;margin:10px auto;}
