@@ -11,6 +11,8 @@ p.line-cn{font-size:16px;}
 .nav{text-align: center;}
 .nav>div{display:inline-block;padding:0 8px;height:20px;line-height:20px;}
 .nav .tech{border-right:1px solid #666;}
+.nav a{text-decoration: none;}
+.nav a:hover{text-decoration: underline;}
 .relLink{text-align: center;}
 .relLink a{font-size:12px;}
 .git-icon{display:inline-block;width:15px;height:15px;margin-right:5px;vertical-align:middle;background:url("../img/github.png") no-repeat;background-size:100%;}
