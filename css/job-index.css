@@ -1,6 +1,6 @@
-#main-index{margin:5% 15%;}
-.zootopia{float:left;width:68%;padding:30px 0 0 50px;margin-left:250px;}
-.profile{position:fixed;width:250px;padding:50px 30px;border:1px solid #666;}
+#main-index{margin:5% 15%;padding:30px 0;}
+.zootopia{float:left;width:68%;padding-left:50px;margin-left:250px;}
+.profile{position:fixed;width:250px;padding:0 30px;border-right:1px solid #666;}
 p.line-en{margin:0;font-size:16px;}
 p.line-cn{font-size:16px;}
 .avatar{width:150px;height:150px;margin:0 auto;}
