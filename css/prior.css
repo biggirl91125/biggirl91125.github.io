@@ -29,3 +29,4 @@ ul,ol,dl{list-style: none;}
 .sb-right .sb-menu li a:hover{border-left:2px solid;}
 a.aHref{text-decoration:underline;color:#337ab7;}
 p img{width:100%;}
+p img.img-w4{width:40%;padding:10px;}
