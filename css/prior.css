@@ -1,5 +1,6 @@
 /*布局调整*/
 ul,ol,dl{list-style: none;}
+
 #hero h2.motto{color:#fff;}
 #hero p.purpose{color:#fff;font-size:20px;display:block;}
 #intro .col-md-8 span.post-meta{display:block;line-height:12px;margin-bottom:20px;color:#000;font-size:12px; }
@@ -27,3 +28,4 @@ ul,ol,dl{list-style: none;}
 .sb-menu li a{padding:0 5px;}
 .sb-right .sb-menu li a:hover{border-left:2px solid;}
 a.aHref{text-decoration:underline;color:#337ab7;}
+p img{width:100%;}
