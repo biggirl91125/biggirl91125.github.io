@@ -1,5 +1,5 @@
 #main-index{margin:5% 15%;padding:30px 0;}
-.zootopia{float:left;width:68%;padding-left:50px;padding-top:0;margin-left:250px;}
+.zootopia,.blossom{float:left;width:68%;padding-left:50px;padding-top:0;margin-left:250px;}
 .profile{position:fixed;width:250px;padding:0 30px;border-right:1px solid #666;}
 p.line-en{margin:0;font-size:16px;}
 p.line-cn{font-size:16px;}
@@ -8,10 +8,10 @@ p.line-cn{font-size:16px;}
 .nick{text-align: center;font-size:18px;padding:10px;}
 .motto{padding:10px;}
 .content-index ul{padding:0;width:200px;margin:10px auto;}
-.nav{text-align: center;margin:10px 0;}
-.nav>div{display:inline-block;padding:0 8px;height:20px;line-height:20px;}
-.nav .tech{border-right:1px solid #666;}
-.nav a{text-decoration:underline;}
+.profile .nav{text-align: center;margin:10px 0;}
+.profile .nav>div{display:inline-block;padding:0 8px;height:20px;line-height:20px;}
+.profile .nav .tech{border-right:1px solid #666;}
+.profile .nav a{text-decoration:underline;}
 .relLink{text-align: center;}
 .relLink a{font-size:12px;text-decoration: none;}
 .relLink a:hover{text-decoration: underline;}
