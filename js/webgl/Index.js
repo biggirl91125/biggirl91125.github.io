@@ -64,7 +64,7 @@
         this.viewTree = new ViewTree(this.gl, "shader-vs", "shader-fs", this.textureTree);
         this.viewGround = new ViewGround(this.gl, "shader-vs-ground", "shader-fs-ground", this.textureGround);
 
-         gui = new dat.GUI();
+         //gui = new dat.GUI();
         // var folderParticles = gui.addFolder("Particles");
         // folderParticles.add(this.viewParticles, "numParticles", 500, 2000);
         // folderParticles.add(this.viewParticles, "numEmit", 50, 100);
@@ -106,7 +106,7 @@
         // f3.addColor(this.viewGround, 'lightColor2');
         //
         // folderGround.add(this.viewGround, 'apply');
-        //scheduler.addEF(this, this._loop, []);
+        scheduler.addEF(this, this._loop, []);
     }
 
 
