@@ -30,11 +30,11 @@
     p.init = function() {
         var that = this;
         this.loader = new PxLoader();
-        this.bg = this.loader.addImage("/img/webgl/giantBG.jpg");
-        this.particle = this.loader.addImage("/img/webgl/flower.png");
-        this.sun = this.loader.addImage("/img/webgl/sun.png");
+        //this.bg = this.loader.addImage("/img/webgl/giantBG.jpg");
+       // this.particle = this.loader.addImage("/img/webgl/flower.png");
+        //this.sun = this.loader.addImage("/img/webgl/sun.png");
         this.tree = this.loader.addImage("/img/webgl/wood.jpg");
-        this.ground = this.loader.addImage("/img/webgl/ground.jpg");
+        //this.ground = this.loader.addImage("/img/webgl/ground.jpg");
         this.loader.addCompletionListener(function(){ that._onImageLoaded()} );
         this.loader.start();
 
@@ -48,18 +48,18 @@
 
 
     p._onImageLoaded = function() {
-        this.textureBg = new GLTexture(this.gl, this.bg);
-        this.textureParticle = new GLTexture(this.gl, this.particle);
-        this.textureSun = new GLTexture(this.gl, this.sun);
+        //this.textureBg = new GLTexture(this.gl, this.bg);
+        //this.textureParticle = new GLTexture(this.gl, this.particle);
+        //this.textureSun = new GLTexture(this.gl, this.sun);
         this.textureTree = new GLTexture(this.gl, this.tree);
-        this.textureGround = new GLTexture(this.gl, this.ground);
+        //this.textureGround = new GLTexture(this.gl, this.ground);
 
         this.projection = new bongiovi.ProjectionPerspectiveMatrix();
         this.projection.perspective(45, W/H, .1, 10000);
         this.camera = new bongiovi.HoverCamera().init(3500);
 
         //this.viewBg = new ViewBg(this.gl, "shader-vs-bg", "shader-fs", this.textureBg);
-        this.viewParticles = new ViewParticles(this.gl, "shader-vs-particle", "shader-fs-particle", this.textureParticle);
+        //this.viewParticles = new ViewParticles(this.gl, "shader-vs-particle", "shader-fs-particle", this.textureParticle);
         //this.viewSun = new ViewSun(this.gl, "shader-vs-bg", "shader-fs", this.textureSun);
         this.viewTree = new ViewTree(this.gl, "shader-vs", "shader-fs", this.textureTree);
         //this.viewGround = new ViewGround(this.gl, "shader-vs-ground", "shader-fs-ground", this.textureGround);
@@ -126,7 +126,7 @@
         //this.viewGround.render(mtx, this.projection.matrix);
 
         this.gl.disable(this.gl.DEPTH_TEST);
-        this.viewParticles.camera = this.camera;
-        this.viewParticles.render(this.projection.matrix);
+        //this.viewParticles.camera = this.camera;
+        //this.viewParticles.render(this.projection.matrix);
     }
 })();
