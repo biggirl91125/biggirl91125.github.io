@@ -278,8 +278,8 @@
             function init() {
                 canvasGL = document.createElement("canvas");
                 canvasGL.id = "canvasGL";
-                //canvasGL.width = window.innerWidth * scale;
-                //canvasGL.height = window.innerHeight;
+                canvasGL.width = window.innerWidth * scale;
+                canvasGL.height = window.innerHeight;
                 canvasGL.style.position = "absolute";
 
                 gl = canvasGL.getContext("experimental-webgl", {premultipliedAlpha:true});
@@ -415,7 +415,7 @@
                 <div class="motto">一个人至少有一个梦想，有一个理由去坚强，心若没有栖息的地方，到哪里都是流浪</div>
             </div>
             <div class="nav">
-                <div class="tech"><a href="/">工作日志</a></div>
+                <div class="tech"><a href="/2017/Work-diary/">工作日志</a></div>
                 <div class="soup"><a href="/2017/Chicken-soup/">北国小憩</a></div>
             </div>
             <div class="relLink"><a href="https://github.com/biggirl91125/" target="_blank"><i class="git-icon"></i>GitHub</a></div>
