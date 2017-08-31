@@ -30,11 +30,11 @@
     p.init = function() {
         var that = this;
         this.loader = new PxLoader();
-        this.bg = this.loader.addImage("img/webgl/giantBG.jpg");
-        this.particle = this.loader.addImage("img/webgl/flower.png");
-        this.sun = this.loader.addImage("img/webgl/sun.png");
-        this.tree = this.loader.addImage("img/webgl/wood.jpg");
-        this.ground = this.loader.addImage("img/webgl/ground.jpg");
+        this.bg = this.loader.addImage("/img/webgl/giantBG.jpg");
+        this.particle = this.loader.addImage("/img/webgl/flower.png");
+        this.sun = this.loader.addImage("/img/webgl/sun.png");
+        this.tree = this.loader.addImage("/img/webgl/wood.jpg");
+        this.ground = this.loader.addImage("/img/webgl/ground.jpg");
         this.loader.addCompletionListener(function(){ that._onImageLoaded()} );
         this.loader.start();
 
