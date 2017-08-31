@@ -90,13 +90,13 @@
         f1.add(this.viewGround, 'light0Z', -1.0, 1.0);
         f1.add(this.viewGround, 'lightWeight0', 0.0, 3.0);
          f1.addColor(this.viewGround, 'lightColor0');
-        //
+
          var f2 = folderGround.addFolder('Light1');
         f2.add(this.viewGround, 'light1X', -1.0, 1.0);
         f2.add(this.viewGround, 'light1Y', -1.0, 1.0);
         f2.add(this.viewGround, 'light1Z', -1.0, 1.0);
         f2.add(this.viewGround, 'lightWeight1', 0.0, 3.0);
-         f2.addColor(this.viewGround, 'lightColor1');
+        f2.addColor(this.viewGround, 'lightColor1');
 
         var f3 = folderGround.addFolder('Light2');
         f3.add(this.viewGround, 'light2X', -1.0, 1.0);
@@ -105,8 +105,8 @@
         f3.add(this.viewGround, 'lightWeight2', 0.0, 3.0);
         f3.addColor(this.viewGround, 'lightColor2');
 
-         folderGround.add(this.viewGround, 'apply');
-         scheduler.addEF(this, this._loop, []);
+        folderGround.add(this.viewGround, 'apply');
+        scheduler.addEF(this, this._loop, []);
     }
 
 
