@@ -18,3 +18,4 @@ p.line-cn{font-size:16px;}
 .git-icon{display:inline-block;width:15px;height:15px;margin-right:5px;vertical-align:middle;background:url("../img/github.png") no-repeat;background-size:100%;}
 .blossom-poem{float:left;width:250px;}
 .blossom-tree{float:right;width:300px;height:400px;}
+#canvasGL{width:100%;height:100%;}

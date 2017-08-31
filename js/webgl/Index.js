@@ -58,11 +58,11 @@
         this.projection.perspective(45, W/H, .1, 10000);
         this.camera = new bongiovi.HoverCamera().init(3500);
 
-        this.viewBg = new ViewBg(this.gl, "shader-vs-bg", "shader-fs", this.textureBg);
+        //this.viewBg = new ViewBg(this.gl, "shader-vs-bg", "shader-fs", this.textureBg);
         this.viewParticles = new ViewParticles(this.gl, "shader-vs-particle", "shader-fs-particle", this.textureParticle);
-        this.viewSun = new ViewSun(this.gl, "shader-vs-bg", "shader-fs", this.textureSun);
+        //this.viewSun = new ViewSun(this.gl, "shader-vs-bg", "shader-fs", this.textureSun);
         this.viewTree = new ViewTree(this.gl, "shader-vs", "shader-fs", this.textureTree);
-        this.viewGround = new ViewGround(this.gl, "shader-vs-ground", "shader-fs-ground", this.textureGround);
+        //this.viewGround = new ViewGround(this.gl, "shader-vs-ground", "shader-fs-ground", this.textureGround);
 
          //gui = new dat.GUI();
         // var folderParticles = gui.addFolder("Particles");
@@ -118,12 +118,12 @@
         var mtx = this.camera.update();
 
         this.gl.disable(this.gl.DEPTH_TEST);
-        this.viewBg.render();
-        this.viewSun.render();
+        //this.viewBg.render();
+        //this.viewSun.render();
 
         this.gl.enable(this.gl.DEPTH_TEST);
         this.viewTree.render(mtx, this.projection.matrix);
-        this.viewGround.render(mtx, this.projection.matrix);
+        //this.viewGround.render(mtx, this.projection.matrix);
 
         this.gl.disable(this.gl.DEPTH_TEST);
         this.viewParticles.camera = this.camera;
