@@ -278,8 +278,8 @@
             function init() {
                 canvasGL = document.createElement("canvas");
                 canvasGL.id = "canvasGL";
-                //canvasGL.width = window.innerWidth * scale;
-                //canvasGL.height = window.innerHeight;
+                canvasGL.width = window.innerWidth * scale;
+                canvasGL.height = window.innerHeight;
                 canvasGL.style.position = "absolute";
 
                 gl = canvasGL.getContext("experimental-webgl", {premultipliedAlpha:true});
