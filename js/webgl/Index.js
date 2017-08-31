@@ -65,47 +65,47 @@
         this.viewGround = new ViewGround(this.gl, "shader-vs-ground", "shader-fs-ground", this.textureGround);
 
          gui = new dat.GUI();
-        var folderParticles = gui.addFolder("Particles");
-        folderParticles.add(this.viewParticles, "numParticles", 500, 2000);
-        folderParticles.add(this.viewParticles, "numEmit", 50, 100);
-        folderParticles.add(this.viewParticles, "minLife", 10, 200);
-        folderParticles.add(this.viewParticles, "maxLife", 10, 300);
-        folderParticles.add(this.viewParticles, "minSize", 10, 100);
-        folderParticles.add(this.viewParticles, "maxSize", 10, 100);
-        folderParticles.add(this.viewParticles, "speed", 1, 10);
-        folderParticles.add(this.viewParticles, "range", 250, 700);
-        folderParticles.open();
-
-        var folderWind = gui.addFolder("Wind");
-        folderWind.add(this.viewParticles, "windx", -1, 1);
-        folderWind.add(this.viewParticles, "windy", 0, 1);
-        folderWind.add(this.viewParticles, "windz", -1, 1);
-        folderWind.add(this.viewParticles, "windspeed", 0, .5);
-
-         var folderGround = gui.addFolder("Ground");
-         folderGround.addColor(this.viewGround, 'ambientColor');
-         var f1 = folderGround.addFolder('Light0');
-        f1.add(this.viewGround, 'light0X', -1.0, 1.0);
-        f1.add(this.viewGround, 'light0Y', -1.0, 1.0);
-        f1.add(this.viewGround, 'light0Z', -1.0, 1.0);
-        f1.add(this.viewGround, 'lightWeight0', 0.0, 3.0);
-         f1.addColor(this.viewGround, 'lightColor0');
-
-         var f2 = folderGround.addFolder('Light1');
-        f2.add(this.viewGround, 'light1X', -1.0, 1.0);
-        f2.add(this.viewGround, 'light1Y', -1.0, 1.0);
-        f2.add(this.viewGround, 'light1Z', -1.0, 1.0);
-        f2.add(this.viewGround, 'lightWeight1', 0.0, 3.0);
-        f2.addColor(this.viewGround, 'lightColor1');
-
-        var f3 = folderGround.addFolder('Light2');
-        f3.add(this.viewGround, 'light2X', -1.0, 1.0);
-        f3.add(this.viewGround, 'light2Y', -1.0, 1.0);
-        f3.add(this.viewGround, 'light2Z', -1.0, 1.0);
-        f3.add(this.viewGround, 'lightWeight2', 0.0, 3.0);
-        f3.addColor(this.viewGround, 'lightColor2');
-
-        folderGround.add(this.viewGround, 'apply');
+        // var folderParticles = gui.addFolder("Particles");
+        // folderParticles.add(this.viewParticles, "numParticles", 500, 2000);
+        // folderParticles.add(this.viewParticles, "numEmit", 50, 100);
+        // folderParticles.add(this.viewParticles, "minLife", 10, 200);
+        // folderParticles.add(this.viewParticles, "maxLife", 10, 300);
+        // folderParticles.add(this.viewParticles, "minSize", 10, 100);
+        // folderParticles.add(this.viewParticles, "maxSize", 10, 100);
+        // folderParticles.add(this.viewParticles, "speed", 1, 10);
+        // folderParticles.add(this.viewParticles, "range", 250, 700);
+        // folderParticles.open();
+        //
+        // var folderWind = gui.addFolder("Wind");
+        // folderWind.add(this.viewParticles, "windx", -1, 1);
+        // folderWind.add(this.viewParticles, "windy", 0, 1);
+        // folderWind.add(this.viewParticles, "windz", -1, 1);
+        // folderWind.add(this.viewParticles, "windspeed", 0, .5);
+        //
+        //  var folderGround = gui.addFolder("Ground");
+        //  folderGround.addColor(this.viewGround, 'ambientColor');
+        //  var f1 = folderGround.addFolder('Light0');
+        // f1.add(this.viewGround, 'light0X', -1.0, 1.0);
+        // f1.add(this.viewGround, 'light0Y', -1.0, 1.0);
+        // f1.add(this.viewGround, 'light0Z', -1.0, 1.0);
+        // f1.add(this.viewGround, 'lightWeight0', 0.0, 3.0);
+        //  f1.addColor(this.viewGround, 'lightColor0');
+        //
+        //  var f2 = folderGround.addFolder('Light1');
+        // f2.add(this.viewGround, 'light1X', -1.0, 1.0);
+        // f2.add(this.viewGround, 'light1Y', -1.0, 1.0);
+        // f2.add(this.viewGround, 'light1Z', -1.0, 1.0);
+        // f2.add(this.viewGround, 'lightWeight1', 0.0, 3.0);
+        // f2.addColor(this.viewGround, 'lightColor1');
+        //
+        // var f3 = folderGround.addFolder('Light2');
+        // f3.add(this.viewGround, 'light2X', -1.0, 1.0);
+        // f3.add(this.viewGround, 'light2Y', -1.0, 1.0);
+        // f3.add(this.viewGround, 'light2Z', -1.0, 1.0);
+        // f3.add(this.viewGround, 'lightWeight2', 0.0, 3.0);
+        // f3.addColor(this.viewGround, 'lightColor2');
+        //
+        // folderGround.add(this.viewGround, 'apply');
         scheduler.addEF(this, this._loop, []);
     }
 
