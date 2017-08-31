@@ -22,7 +22,7 @@
 
 
     p._init = function() {
-        this._objModel = new bongiovi.ObjModel(this.gl, "./objs/tree.obj");
+        this._objModel = new bongiovi.ObjModel(this.gl, "/objs/tree.obj");
         this._objModel.setTexture(0, this.texture);
     }
 
