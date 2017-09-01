@@ -21,8 +21,8 @@
 
         this.viewParticles = null;
         // this.gl.disable(this)
-        var that = this
-        window.addEventListener("resize", function(e) {that._onResize(e);	}	);
+        //var that = this
+        //window.addEventListener("resize", function(e) {that._onResize(e);	}	);
     }
 
     var p = Index.prototype;
