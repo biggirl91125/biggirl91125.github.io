@@ -2,7 +2,7 @@
  * Created by chaowang211311 on 2017/8/31.
  */
 // GLModelShader.js
-
+//编译着色器：顶点着色器/片段着色器
 if(window.bongiovi === undefined ) window.bongiovi = {};
 
 (function() {
