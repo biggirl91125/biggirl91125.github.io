@@ -176,7 +176,20 @@
     });
 </script>
 <!--GLSL写着色器-->
-<script id="shader-vs" type="x-shader/x-vertex">
+    <script id="shader-fs" type="x-shader/x-fragment">
+            precision mediump float;
+
+            varying vec2 vTextureCoord;
+            varying vec3 vOutputCoord;
+
+            uniform sampler2D uSampler0;
+
+            void main(void) {
+                vec4 color = texture2D(uSampler0, vec2(vTextureCoord.s, vTextureCoord.t));
+                gl_FragColor = color;
+            }
+        </script>
+    <script id="shader-vs" type="x-shader/x-vertex">
             attribute vec3 aVertexPosition;
             attribute vec2 aTextureCoord;
 
@@ -194,7 +207,7 @@
 
 
 
-<script id="shader-vs-particle" type="x-shader/x-vertex">
+    <script id="shader-vs-particle" type="x-shader/x-vertex">
             attribute vec3 aVertexPosition;
             attribute vec2 aTextureCoord;
             attribute vec2 sizeOffset;
@@ -267,7 +280,7 @@
             }
         </script>
 
-<script id="shader-fs-particle" type="x-shader/x-fragment">
+    <script id="shader-fs-particle" type="x-shader/x-fragment">
             precision mediump float;
 
             varying vec2 vTextureCoord;
