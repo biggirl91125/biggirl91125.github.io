@@ -1,15 +1,15 @@
 $(document).ready(function($) {
     "use strict";
 
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 10) {
-            $(".lightnav .navbar-inner").addClass("lightnav-alt");
-            $(".darknav .navbar-inner").addClass("darknav-alt");
-        } else {
-            $(".lightnav .navbar-inner").removeClass("lightnav-alt");
-            $(".darknav .navbar-inner").removeClass("darknav-alt");
-        }
-    });
+    // $(window).scroll(function () {
+    //     if ($(document).scrollTop() > 10) {
+    //         $(".lightnav .navbar-inner").addClass("lightnav-alt");
+    //         $(".darknav .navbar-inner").addClass("darknav-alt");
+    //     } else {
+    //         $(".lightnav .navbar-inner").removeClass("lightnav-alt");
+    //         $(".darknav .navbar-inner").removeClass("darknav-alt");
+    //     }
+    // });
 
 	$(document).ready(function($) {
 

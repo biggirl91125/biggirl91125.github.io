@@ -11,7 +11,7 @@ ul,ol,dl{list-style: none;}
 
 /*code style*/
 .code-area{border:1px solid #d4d4d4;font-size:12px;}
-.code-area .code{color:#cccccc;}
+.code-area .code{color:#666666;overflow-x:auto;white-space: nowrap;}
 .code-area .code span[class*=html-]{color:green;}
 .code-area .html-note span{color:#d4d4d4;}
 #intro p a.tul{text-decoration: underline;display:block;}
