@@ -21,7 +21,7 @@
 
     <link rel="alternate" href="/atom.xml" title="Judy&#39;s blog" type="application/atom+xml">
     <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-    
+    <link rel="stylesheet" href="/css/prior.css" media="screen" type="text/css">
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
@@ -182,7 +182,14 @@
                 <p>Vue.js支持所有兼容ECMAScript 5的浏览器。</p>
                 <p>Vue.js不支持IE8及以下版本，因为Vue.js使用了IE8不能模拟的ECMAScript。</p>
                 <h3>#Debug工具</h3>
-                <p></p>
+                <p>
+                    使用vue-devtools帮助我们审查和调试Vue应用,网上给出的下载地址打不开，只好手动安装，安装步骤如下：
+                    <br>1)git clone vue-devtools repo——>https://github.com/vuejs/vue-devtools.git
+                    <br>2)cd vue-devtools && npm install
+                    <br>3)npm run build
+                    <br>4)打开谷歌浏览器扩展界面，chrome://extensions && check "开发者模式"
+                    <br>5)点击"加载已解压的扩展程序"，选择vue-devtools下的shells/chrome
+                </p>
             </div>
             <div class="individual-right">
                 <div class="calendar-widget">
@@ -295,6 +302,8 @@
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/vue/vue-v2.3.4.min.js"></script>
+
 <script type="text/javascript">
 $('#intro').find('img').each(function(){
   var alt = this.alt;
