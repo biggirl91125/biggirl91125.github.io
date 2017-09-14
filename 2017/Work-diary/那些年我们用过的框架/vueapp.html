@@ -9,10 +9,11 @@
         #vue-demo .nav{float:left;width:200px;}
         #vue-demo .intoView{float:left;width:100%;margin-left:-100%;padding:20px;}
         /*#vue-demo .active{color:cornflowerblue;}*/
+        .cf:after{content:'';overflow:hidden; clear:both; display:block; height:0; }
     </style>
 </head>
 <body>
-    <div id="vue-demo">
+    <div id="vue-demo" class="cf">
 
         <div class="intoView">
             <router-view></router-view>
