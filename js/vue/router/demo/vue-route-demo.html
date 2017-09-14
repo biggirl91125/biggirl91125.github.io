@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router demo</title>
+    <style>
+        body{background:#DD7B3B;padding:50px 25px;}
+        #vue-demo{ width:800px;height:500px;margin:0 auto;padding:15px 30px;background:#f9f7f5;}
+        #vue-demo .nav{float:left;width:150px;height:400px;border-right:1px solid #000;padding-top:20px;margin-left:-100%;box-sizing:border-box;}
+        #vue-demo .intoView{float:left;width:100%;padding: 50px 20px 20px 200px;box-sizing:border-box;}
+        /*#vue-demo .active{color:cornflowerblue;}*/
+        .cf:after{content:'';overflow:hidden; clear:both; display:block; height:0; }
+    </style>
+</head>
+<body>
+    <div id="vue-demo" class="cf">
+
+        <div class="intoView">
+            <router-view></router-view>
+        </div>
+        <ul class="nav">
+            <li>
+                <!-- vue2.0父子组件通讯原则，父组件通过props传递数据给子组件,子组件触发事件给父组件。如果父组件想在子组件上监听自己的click,需加native修饰符-->
+                <router-link to="/" @click.native="go">Home</router-link>
+            </li>
+            <li>
+                <router-link to="/about" @click.native="go">About</router-link>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="/js/vue/vue-v2.3.4.min.js"></script>
+    <script type="text/javascript" src="/js/vue/vue-router-v2.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/vue/router/routes.js"></script>
+</body>
+</html>

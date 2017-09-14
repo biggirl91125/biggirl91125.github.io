@@ -132,9 +132,9 @@
             <div class="relLink"><a href="https://github.com/biggirl91125/" target="_blank"><i class="git-icon"></i>GitHub</a></div>
             <div class="content-index">
                 <ul>
-                    <li><a  class="aHref" href="./work.html">作品链接</a></li>
-                    <li><a  class="aHref" href="./那些年我们用过的框架/初学Vue-js.html">初学Vue.js</a></li>
-                    <li><a  class="aHref" href="./移动端开发那些坑儿/前端js与webview交互.html">前端js与webview交互</a></li>
+                    <li><router-link  to="/works" class="aHref" >作品链接</router-link></li>
+                    <li><router-link  to="/vue" class="aHref" >初学Vue.js</router-link></li>
+                    <li><router-link  to="/webview" class="aHref" >前端js与webview交互</router-link></li>
                     <li><a  class="aHref" href="./脚踏实地/ECMAScript-with语句被弃用？.html">ECMAScript-with语句被弃用</a></li>
                     <li><a  class="aHref" href="./脚踏实地/DOM2样式API.html">DOM2样式API</a></li>
                     <li><a  class="aHref" href="./脚踏实地/学好事件，走遍前端都不怕.html">事件</a></li>
@@ -153,6 +153,8 @@
     <script src="/js/scripts.js"></script><!-- Theme scripts -->
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
     <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="/js/vue/router/js/lib/vue-v2.3.4.min.js"></script>
+    <script src="/js/vue/router/js/lib/vue-router-v2.6.0.min.js"></script>
     <!-- Initiate flexslider plugin -->
     <script type="text/javascript">
         $(document).ready(function($) {

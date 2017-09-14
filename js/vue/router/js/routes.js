@@ -26,20 +26,17 @@
         },
         computed:{
             isActive:function(){
-                console.log("is active:"+this.href);
                 return this.href === this.currentRoute;
             }
         },
         methods:{
             init:function(){
                 window.addEventListener('popstate',function(){
-                    console.log("pop");
                     this.currentRoute=window.location.pathname;
                 });
             },
             go:function(ev){
                 ev.preventDefault();
-                console.log("go:"+this.href);
                 this.href=ev.target.href;
                 this.currentRoute=this.href;
                 window.history && window.history.pushState

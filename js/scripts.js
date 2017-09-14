@@ -188,3 +188,22 @@ $(document).ready(function($) {
 		}
 	});
 });
+(function(){
+	const works={template:'<iframe src="./work.html"></iframe>'};
+	const vue={template:'<iframe src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
+	const webview={template:'<iframe src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
+
+	const routes=[
+		{path:'/works',component:works},
+		{path:'/vue',component:vue},
+		{path:'/webview',component:webview}
+	];
+    const router=new VueRouter({
+        mode:'history',//h5 history模式，path更简洁美观
+        routes:routes
+    });
+   new Vue({
+        router:router,
+        data:{}
+    }).$mount(".content-index");
+})();
