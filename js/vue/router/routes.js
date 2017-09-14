@@ -13,7 +13,7 @@
         {path:'/about',component:About}
     ];
     const router=new VueRouter({
-        mode:'history',
+        // mode:'history',
         routes:routes
     });
     // 创建根实例
@@ -21,17 +21,13 @@
         el: '#vue-demo',
         router:router,
         data:{
-            currentRoute:window.location.pathname,
-            activeClass:'active'
+            currentRoute:window.location.pathname
         },
         methods:{
             init:function(){
                 window.addEventListener('popstate',function(){
                     this.currentRoute=window.location.pathname;
                 });
-            },
-            isActive:function(){
-
             },
             go:function(ev){
                 console.log("h5 go");
