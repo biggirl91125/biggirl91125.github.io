@@ -205,5 +205,5 @@ $(document).ready(function($) {
    new Vue({
         router:router,
         data:{}
-    }).$mount(".content-index");
+    }).$mount("#main-index");
 })();
