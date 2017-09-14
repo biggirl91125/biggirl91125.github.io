@@ -191,6 +191,20 @@
                     <br>5)点击"加载已解压的扩展程序"，选择vue-devtools下的shells/chrome
                     <br>注意：安装完vue-devtools，重启浏览器，选择vue应用页面打开，非vue应用默认不显示vue panel。
                 </p>
+                <p><img src="./img/vue-devtools.png"></p>
+                <h3>#基本语法</h3>
+                <p>语法就不详说了，更多详细介绍可参考<a class="aHref" href="https://cn.vuejs.org/v2/guide/syntax.html">vue社区</a></p>
+                <h3>#原理</h3>
+                <p>vue是<a class="aHref" href="./MVC设计模式.html">mvvm框架</a>,更专注于用户体验的视图层，实现了双向数据绑定。Vue采用数据劫持+发布者-订阅者模式，通过<a class="aHref" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>劫持各个属性的setter/getter，在数据变动时，发布消息给订阅者，触发相应的监听回调。</p>
+                <p>Object.defineProperty</p>
+                <p>首先，我们先来思考，如果要实现数据绑定，我们需要做什么？</p>
+                <p>1)Model->View，我们需要解析dom中的绑定指令，替换数据，更新dom显示，即解析器Compiler</p>
+                <p>2)View->Model，我们需要监听dom中的数据变化，绑定相应的更新函数,即监听器Observer</p>
+                <p>具体实现详见<a class="aHref" href="https://github.com/biggirl91125/vue">vue-mvvm实现原理</a>，当然这只实现了简易的双向数据绑定，我们可以逐步完善。</p>
+                <h3>#路由</h3>
+                <p>vue路由是一个独立的插件，当你的项目达到一定规模时，需要路由插件完成应用的路径部署。</p>
+                <h3>参考</h3>
+                <p><a class="aHref" href="http://www.cnblogs.com/dhsz/p/7064835.html">Vuejs源码-Depend</a></p>
            </div>
             <div class="individual-right">
                 <div class="calendar-widget">
