@@ -174,7 +174,7 @@
                 <h2>初学Vue.js</h2>
                 <span class="post-meta"><time datetime="2017-09-07T03:37:28.000Z" itemprop="datePublished">2017-09-07</time></span>
                 <h3>#Less is more</h3>
-                <p>即理解Vue产生的背景及Vue适应背景的特性，可参考尤大<a class="aHref" href="https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247484393&idx=1&sn=142b8e37dfc94de07be211607e468030&chksm=9723612ba054e83db6622a891287af119bb63708f1b7a09aed9149d846c9428ad5abbb822294&mpshare=1&scene=1&srcid=1026oUz3521V74ua0uwTcIWa&from=groupmessage&isappinstalled=0#wechat_redirect&utm_source=tuicool&utm_medium=referral">Vue2.0-渐进式前端解决方案</a>。框架是用于解决工程上具有一定复杂度的问题而抽象出的模式，以提高开发效率，但同时带来的是一个框架的学习成本问题，因为框架自身也是有复杂度的。</p>
+                <p>即理解Vue产生的背景及Vue适应背景的特性，可参考尤大<a class="aHref" target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247484393&idx=1&sn=142b8e37dfc94de07be211607e468030&chksm=9723612ba054e83db6622a891287af119bb63708f1b7a09aed9149d846c9428ad5abbb822294&mpshare=1&scene=1&srcid=1026oUz3521V74ua0uwTcIWa&from=groupmessage&isappinstalled=0#wechat_redirect&utm_source=tuicool&utm_medium=referral">Vue2.0-渐进式前端解决方案</a>。框架是用于解决工程上具有一定复杂度的问题而抽象出的模式，以提高开发效率，但同时带来的是一个框架的学习成本问题，因为框架自身也是有复杂度的。</p>
                 <p>于是，开发者会去衡量应用本身的复杂度和所使用框架的复杂度，从而抽象出一个开发者都会面临的问题：内在复杂度VS.工具复杂度，怎样保证两者的协调性？</p>
                 <p>Vue的特性在于渐进式(Progressive)和组件式(Component)开发。它很好的解决了内在复杂度和工具复杂度之间的适配问题。渐进式的含义在于层层扩展，在核心功能的基础上逐步做加法，形成伸缩性很强的一个生态圈,你拥有自由选择权。</p>
                 <p class="text-indent-0"><img src="./img/vue-p.png"></p>
@@ -193,7 +193,7 @@
                 </p>
                 <p><img src="./img/vue-devtools.png"></p>
                 <h3>#基本语法</h3>
-                <p>语法就不详说了，更多详细介绍可参考<a class="aHref" href="https://cn.vuejs.org/v2/guide/syntax.html">vue社区</a></p>
+                <p>语法就不详说了，更多详细介绍可参考<a class="aHref" href="https://cn.vuejs.org/v2/guide/syntax.html">vue社区</a>。</p>
                 <h3>#原理</h3>
                 <p>vue是<a class="aHref" href="./MVC设计模式.html">mvvm框架</a>,更专注于用户体验的视图层，实现了双向数据绑定。Vue采用数据劫持+发布者-订阅者模式，通过<a class="aHref" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>劫持各个属性的setter/getter，在数据变动时，发布消息给订阅者，触发相应的监听回调。</p>
                 <p>Object.defineProperty</p>
@@ -203,6 +203,7 @@
                 <p>具体实现详见<a class="aHref" href="https://github.com/biggirl91125/vue">vue-mvvm实现原理</a>，当然这只实现了简易的双向数据绑定，我们可以逐步完善。</p>
                 <h3>#路由</h3>
                 <p>vue路由是一个独立的插件，当你的项目达到一定规模时，需要路由插件完成应用的路径部署。</p>
+                <p>vue-router+H5 History API构成相对完善的路由，<a class="aHref" href="./vueapp.html">demo示例</a></p>
                 <h3>参考</h3>
                 <p><a class="aHref" href="http://www.cnblogs.com/dhsz/p/7064835.html">Vuejs源码-Depend</a></p>
            </div>
