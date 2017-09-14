@@ -15,17 +15,19 @@
     <link rel="stylesheet" href="/css/job-index.css" media="screen" type="text/css">
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/css/ie8.css" />-->
     <![endif]-->
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <!--<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>-->
 
     <!-- Load these in the <head> for quicker IE8+ load times -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]-->
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
+    <!--<script src="/js/html5shiv.min.js"></script>-->
+    <!--<script src="/js/respond.min.js"></script>-->
+    <script src="/js/vue/router/js/lib/vue-v2.3.4.min.js"></script>
+    <script src="/js/vue/router/js/lib/vue-router-v2.6.0.min.js"></script>
 </head>
 <body id="index" class="lightnav animsition">
 <div id="sb-site">
@@ -83,8 +85,7 @@
             </router-view>
         </section>
 
-        <script src="/js/vue/router/js/lib/vue-v2.3.4.min.js"></script>
-        <script src="/js/vue/router/js/lib/vue-router-v2.6.0.min.js"></script>
+
         <aside class="profile">
             <div class="pInfo">
                 <div class="avatar"><img src="/img/freedom.jpg"></div>
