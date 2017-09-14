@@ -10,10 +10,14 @@
         {path:'/',component:Home},
         {path:'/about',component:About}
     ];
+    const router=new VueRouter({
+        mode:'history',
+        routes:routes
+    });
     // 创建根实例
     const app=new Vue({
         el: '#vue-demo',
-        routes:routes,
+        router:router,
         data:{
             currentRoute:window.location.pathname,
             activeClass:'active'
