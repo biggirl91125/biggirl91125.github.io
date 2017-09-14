@@ -20,6 +20,7 @@
         </div>
         <ul class="nav">
             <li>
+                <!-- vue2.0父子组件通讯原则，父组件通过props传递数据给子组件,子组件触发事件给父组件。如果父组件想在子组件上监听自己的click,需加native修饰符-->
                 <router-link to="/" @click.native="go">Home</router-link>
             </li>
             <li>

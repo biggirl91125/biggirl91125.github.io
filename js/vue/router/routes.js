@@ -13,7 +13,7 @@
         {path:'/about',component:About}
     ];
     const router=new VueRouter({
-        mode:'history',//path更简洁美观
+        mode:'history',//h5 history模式，path更简洁美观
         routes:routes
     });
     // 创建根实例
@@ -21,20 +21,30 @@
         el: '#vue-demo',
         router:router,
         data:{
-            currentRoute:window.location.pathname
+            currentRoute:window.location.pathname,
+            href:''
+        },
+        computed:{
+            isActive:function(){
+                console.log("is active:"+this.href);
+                return this.href === this.currentRoute;
+            }
         },
         methods:{
             init:function(){
+                this.href=window.location.pathname;
+                console.log("init:"+this.href);
                 window.addEventListener('popstate',function(){
                     this.currentRoute=window.location.pathname;
                 });
             },
             go:function(ev){
-                console.log("h5 go");
+                console.log("go:"+this.isActive());
                 ev.preventDefault();
-                this.$root.currentRoute=this.href;
+                console.log("go:"+this.href);
+                this.currentRoute=this.href;
                 window.history && window.history.pushState
-                && window.history.pushState(null,null,this.href);
+                && window.history.pushState(null,'',this.href);
 
             }
         }
