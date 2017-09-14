@@ -22,7 +22,7 @@
         router:router,
         data:{
             currentRoute:window.location.pathname,
-            href:''
+            href:'/'
         },
         computed:{
             isActive:function(){
@@ -32,16 +32,15 @@
         },
         methods:{
             init:function(){
-                this.href=window.location.pathname;
-                console.log("init:"+this.href);
                 window.addEventListener('popstate',function(){
+                    console.log("pop");
                     this.currentRoute=window.location.pathname;
                 });
             },
             go:function(ev){
-                console.log("go:"+this.isActive());
                 ev.preventDefault();
                 console.log("go:"+this.href);
+                this.href=ev.target.href;
                 this.currentRoute=this.href;
                 window.history && window.history.pushState
                 && window.history.pushState(null,'',this.href);
