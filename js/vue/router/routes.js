@@ -13,7 +13,7 @@
         {path:'/about',component:About}
     ];
     const router=new VueRouter({
-        // mode:'history',
+        mode:'history',//path更简洁美观
         routes:routes
     });
     // 创建根实例
