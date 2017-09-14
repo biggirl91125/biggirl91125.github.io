@@ -4,9 +4,11 @@
 (function(){
 
     // 注册组件
+    const NotFound={template:'<div>404 Not Found!</div>'};
     const Home={template:'<div>Welcome home!</div>'};
     const About={template:'<div>About page!</div>'};
     const routes=[
+        {path:'*',component:NotFound},
         {path:'/',component:Home},
         {path:'/about',component:About}
     ];

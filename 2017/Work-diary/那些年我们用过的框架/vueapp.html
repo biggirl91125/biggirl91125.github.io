@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>vue-router demo</title>
     <style>
-        #vue-demo{margin:0 auto;padding:15px 30px;background:#f9f7f5;}
-        #vue-demo .active{color:cornflowerblue;}
+        body{background:#DD7B3B;padding:50px 25px;}
+        #vue-demo{ padding:15px 30px;background:#f9f7f5;}
+        #vue-demo .nav{float:left;width:200px;}
+        #vue-demo .intoView{float:left;width:100%;margin-left:-100%;padding:20px;}
+        /*#vue-demo .active{color:cornflowerblue;}*/
     </style>
 </head>
 <body>
     <div id="vue-demo">
-        <ul>
-            <li>
-                <router-link to="/" @click="go"  >Home</router-link>
-                <router-link to="/about" @click="go" >About</router-link>
-            </li>
-        </ul>
-        <div>
+
+        <div class="intoView">
             <router-view></router-view>
         </div>
+        <ul class="nav">
+            <li>
+                <router-link to="/" @click="go" >Home</router-link>
+            </li>
+            <li>
+                <router-link to="/about" @click="go">About</router-link>
+            </li>
+        </ul>
     </div>
 
     <script type="text/javascript" src="/js/vue/vue-v2.3.4.min.js"></script>
