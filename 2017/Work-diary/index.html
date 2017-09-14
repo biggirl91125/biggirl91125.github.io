@@ -78,51 +78,11 @@
 </div>
     <!-- ============================ Header & Logo bar =========================== -->
     <article id="main-index" class="clearfix">
-        <div>
-        <router-view>
         <section class="zootopia">
-            <h3>Zootopia——疯狂动物城</h3>
-            <p class="line-en">When i was a kid,</p>
-            <p class="line-cn">小时候，</p>
-            <p class="line-en">I thought Zootopia was this perfect place.</p>
-            <p class="line-cn">我以为动物城是个很完美的地方。</p>
-            <p class="line-en">Where everyone got along,</p>
-            <p class="line-cn">每只动物都和睦相处，</p>
-            <p class="line-en">and anyone could be anything.</p>
-            <p class="line-cn">谁都能成就无限可能。</p>
-            <p class="line-en">Turns out,</p>
-            <p class="line-cn">但现在发现，</p>
-            <p class="line-en">real life is a little bit more complicated than a slogan on a bumper sticker.</p>
-            <p class="line-cn">现实比理想更复杂。</p>
-            <p class="line-en">Real life is messy.</p>
-            <p class="line-cn">现实生活是糟糕的。</p>
-            <p class="line-en">We all have limitations.</p>
-            <p class="line-cn">我们都有局限性。</p>
-            <p class="line-en">We all make mistakes.</p>
-            <p class="line-cn">我们都会犯错误。</p>
-            <p class="line-en">Which means,hey,glass half full,we all have a lot in common.</p>
-            <p class="line-cn">但是乐观的说，我们都很相通。</p>
-            <p class="line-en">And the more we try to understand one another.</p>
-            <p class="line-cn">我们越是努力去了解别人，</p>
-            <p class="line-en">The more exception each of us will be.</p>
-            <p class="line-cn">我们会变得越出色。</p>
-            <p class="line-en">But we have to try.</p>
-            <p class="line-cn">但凡事都要尝试。</p>
-            <p class="line-en">So no matter what type of animal you are.</p>
-            <p class="line-cn">不管你是什么类型的动物，</p>
-            <p class="line-en">From the biggest elephant,to our first fox.</p>
-            <p class="line-cn">从巨大的大象，到第一只狐狸警官。</p>
-            <p class="line-en">I implore you.</p>
-            <p class="line-cn">我恳请你们，</p>
-            <p class="line-en">Try ...,try to make the world a better place.</p>
-            <p class="line-cn">努力试着让世界变得更美好。</p>
-            <p class="line-en">Look inside yourself and recognize that change starts with you.</p>
-            <p class="line-cn">审视自己的内心，从改变自己开始</p>
-            <p class="line-en">It starts with me.It starts with all of us.</p>
-            <p class="line-cn">从我做起，从我们做起。</p>
+            <router-view>
+            </router-view>
         </section>
-        </router-view>
-        </div>
+
         <script src="/js/vue/router/js/lib/vue-v2.3.4.min.js"></script>
         <script src="/js/vue/router/js/lib/vue-router-v2.6.0.min.js"></script>
         <aside class="profile">
@@ -138,6 +98,7 @@
             <div class="relLink"><a href="https://github.com/biggirl91125/" target="_blank"><i class="git-icon"></i>GitHub</a></div>
             <div class="content-index">
                 <ul>
+                    <li><router-link  to="/" class="aHref" >首页</router-link></li>
                     <li><router-link  to="/works" class="aHref" >作品链接</router-link></li>
                     <li><router-link  to="/vue" class="aHref" >初学Vue.js</router-link></li>
                     <li><router-link  to="/webview" class="aHref" >前端js与webview交互</router-link></li>
