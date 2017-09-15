@@ -14,7 +14,7 @@ $(document).ready(function($) {
 	$(document).ready(function($) {
 
 		// Slidebars off-canvas menu
-		$.slidebars();
+		//$.slidebars();
 
 		// Popovers [Hover]
 		$("[data-toggle=popover]")
@@ -190,15 +190,15 @@ $(document).ready(function($) {
 });
 (function(){
 	const index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./zoo.html"></iframe>'};
-	const works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/work.html"></iframe>'};
-	const vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/那些年我们用过的框架/初学Vue-js.html"></iframe>'};
-	const webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
+	const works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./work.html"></iframe>'};
+	const vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
+	const webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
 
 	const routes=[
 		{path:'/2017/Work-diary',component:index},
-		{path:'/works',component:works},
-		{path:'/vue',component:vue},
-		{path:'/webview',component:webview}
+		{path:'./works',component:works},
+		{path:'./vue',component:vue},
+		{path:'./webview',component:webview}
 	];
     const router=new VueRouter({
         mode:'history',//h5 history模式，path更简洁美观
