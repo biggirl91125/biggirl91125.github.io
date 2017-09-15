@@ -17,11 +17,11 @@ $(document).ready(function($) {
 		//$.slidebars();
 
 		// Popovers [Hover]
-		$("[data-toggle=popover]")
-			.popover({
-				html:true
-			}
-		);
+		// $("[data-toggle=popover]")
+		// 	.popover({
+		// 		html:true
+		// 	}
+		// );
 
 		// $("html").niceScroll({
 		// 	smoothscroll: true, // scroll with ease movement
