@@ -196,9 +196,9 @@ $(document).ready(function($) {
 
 	const routes=[
 		{path:'/2017/Work-diary',component:index},
-		{path:'./works',component:works},
-		{path:'./vue',component:vue},
-		{path:'./webview',component:webview}
+		{path:'/2017/Work-diary/works',component:works},
+		{path:'/2017/Work-diary/vue',component:vue},
+		{path:'/2017/Work-diary/webview',component:webview}
 	];
     const router=new VueRouter({
         mode:'history',//h5 history模式，path更简洁美观
