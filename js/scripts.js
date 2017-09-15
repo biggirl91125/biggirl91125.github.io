@@ -189,7 +189,7 @@ $(document).ready(function($) {
 	});
 });
 (function(){
-	const index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/zoo.html"></iframe>'};
+	const index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./zoo.html"></iframe>'};
 	const works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/work.html"></iframe>'};
 	const vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/那些年我们用过的框架/初学Vue-js.html"></iframe>'};
 	const webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./2017/Work-diary/移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
