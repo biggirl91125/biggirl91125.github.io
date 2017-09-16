@@ -32,10 +32,10 @@ ul,ol,dl{list-style: none;}
 a.aHref{text-decoration:underline;color:#337ab7;}
 p img{width:100%;}
 p img.img-w4{float:left;width:40%;padding:10px;}
-#main-index{margin:5% 15%;padding:30px 0;}
-.zootopia,.blossom{float:left;width:68%;padding-left:50px;padding-top:0;margin-left:250px;}
+#main-index{margin:5% 15%;padding:30px 0;position:relative;z-index:9;}
+.zootopia,.blossom{float:left;width:68%;padding-left:250px;padding-top:0;}
 section.works-show{margin-left:0;}
-.profile{position:fixed;width:250px;padding:0 30px;border-right:1px solid #666;}
+.profile{float:left;width:250px;padding:0 30px;margin-left:-68%;border-right:1px solid #666;}
 p.line-en{margin:0;font-size:16px;}
 p.line-cn{font-size:16px;}
 .avatar{width:150px;height:150px;margin:0 auto;}

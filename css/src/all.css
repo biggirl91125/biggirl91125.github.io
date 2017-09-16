@@ -242,9 +242,9 @@ h1 span {
 }
 section {
 	background-color: #fff;
-	position: relative;
+	/*position: relative;*/
 	padding-top: 60px;
-	z-index: 4;
+	/*z-index: 4;*/
 }
 a,
 a:hover,
@@ -3196,10 +3196,12 @@ button.send{
 * Global footer, (all pages)
 ******************************************************* */
 footer {
-	padding:5% 0 0;
+	width:100%;
+	padding:3% 0 0;
 	background:#151515;
 	z-index: 9;
 	position: relative;
+	bottom:0;
 }
 footer p.m_14 {
 	color:#767D84;
