@@ -12,7 +12,7 @@
     <meta name="keywords" content="IT,博客,鸡汤" />
     <link rel="stylesheet" href="/css/src/all.css" media="screen" type="text/css">
     <link rel="stylesheet" href="/css/src/prior.css" media="screen" type="text/css">
-    <script src="/js/dist/vue-45578b9d57.min.js"></script>
+
 </head>
 <body id="index" class="lightnav animsition">
 <div id="sb-site">
@@ -125,5 +125,39 @@
     <script src="/js/dist/plugin-31c7f59e5e.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
     <link rel="stylesheet" href="/css/dist/fancybox/jquery.fancybox.min.css" media="screen" type="text/css">
     <script src="/js/src/scripts.js"></script><!-- Theme scripts -->
+    <script src="/js/dist/vue-45578b9d57.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            var getCss = function(path) {
+                var head = document.getElementsByTagName('head')[0];
+                link = document.createElement('link');
+                link.href = path;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                head.appendChild(link);
+            };
+            getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+            getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+            var index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./zoo.html"></iframe>'};
+            var works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./work.html"></iframe>'};
+            var vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
+            var webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
+
+            var routes=[
+                {path:'/2017/Work-diary',component:index},
+                {path:'/2017/Work-diary/works',component:works},
+                {path:'/2017/Work-diary/vue',component:vue},
+                {path:'/2017/Work-diary/webview',component:webview}
+            ];
+            var router=new VueRouter({
+                mode:'history',//h5 history模式，path更简洁美观
+                routes:routes
+            });
+            new Vue({
+                router:router,
+                data:{}
+            }).$mount("#main-index");
+        })();
+    </script>
 </body>
 </html>
