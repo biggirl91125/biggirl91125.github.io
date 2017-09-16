@@ -1,5 +1,5 @@
 $(document).ready(function($) {
-    "use strict";
+    //"use strict";
 
     // $(window).scroll(function () {
     //     if ($(document).scrollTop() > 10) {
@@ -198,18 +198,18 @@ $(document).ready(function($) {
         };
         getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
         getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
-        const index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./zoo.html"></iframe>'};
-        const works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./work.html"></iframe>'};
-        const vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
-        const webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
+        var index={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./zoo.html"></iframe>'};
+        var works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./work.html"></iframe>'};
+        var vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
+        var webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="10000px" src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
 
-        const routes=[
+        var routes=[
             {path:'/2017/Work-diary',component:index},
             {path:'/2017/Work-diary/works',component:works},
             {path:'/2017/Work-diary/vue',component:vue},
             {path:'/2017/Work-diary/webview',component:webview}
         ];
-        const router=new VueRouter({
+        var router=new VueRouter({
             mode:'history',//h5 history模式，path更简洁美观
             routes:routes
         });
