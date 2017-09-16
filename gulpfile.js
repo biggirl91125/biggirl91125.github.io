@@ -32,14 +32,18 @@ gulp.task('jshint', function() {
         .pipe(jshint.reporter('default'));
 });
 gulp.task('concatjs', function(event) {
-    gulp.src([jsSrc + '**/*.js','!'+jsSrc+'*.js'])
-        //.pipe(rename({suffix: '.min'}))
-        //.pipe(uglify())
+    gulp.src([jsSrc + 'plugins/*.js'])
         .pipe(concat('plugin.min.js'))
         .pipe(rev())
         //.pipe(rev.manifest())
         .pipe(gulp.dest(jsDist));
+    gulp.src([jsSrc + 'vue/*.js'])
+        .pipe(concat('vue.min.js'))
+        .pipe(rev())
+        //.pipe(rev.manifest())
+        .pipe(gulp.dest(jsDist));
 });
+
 gulp.task('uglifyjs', function(event) {
     gulp.src([jsSrc+'*.js'])
     //.pipe(rename({suffix: '.min'}))

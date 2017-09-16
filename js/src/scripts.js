@@ -114,10 +114,10 @@ $(document).ready(function($) {
 		}
 
 		// autohide navbar on scroll
-		$("div.navbar-fixed-top").autoHidingNavbar({
-			animationDuration: 400,
-			hideOffset: 0,
-		});
+		// $("div.navbar-fixed-top").autoHidingNavbar({
+		// 	animationDuration: 400,
+		// 	hideOffset: 0,
+		// });
 
 		// faq's floating sidebar (left)
 	    $('#sidebar').affix({
@@ -127,13 +127,13 @@ $(document).ready(function($) {
 		});
 
 	    // Scrollspy for scrollto links in floating faq sidebar
-		var $body   = $(document.body);
-		var navHeight = $('.navbar').outerHeight(true) + 80;
-
-		$body.scrollspy({
-			target: '#leftcol',
-			offset: navHeight
-		});
+        // var $body   = $(document.body);
+        // var navHeight = $('.navbar').outerHeight(true) + 80;
+        //
+        // $body.scrollspy({
+			// target: '#leftcol',
+			// offset: navHeight
+        // });
 
 		// fade out map cover (contact.html)
 	    $(".map-cover").click(function () {
