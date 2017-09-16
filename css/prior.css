@@ -15,6 +15,7 @@ ul,ol,dl{list-style: none;}
 .code-area .code{color:#666666;overflow-x:auto;white-space: nowrap;}
 .code-area .code span[class*=html-]{color:green;}
 .code-area .html-note span{color:#d4d4d4;}
+#intro{padding-top:0;}
 #intro p a.tul{text-decoration: underline;display:block;}
 .code-area .html-indent{text-indent:20px;}
 .code-area .text-indent-1{text-indent:20px;}

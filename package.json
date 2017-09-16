@@ -1,0 +1,21 @@
+{
+  "name": "biggirl blog",
+  "description": "biggirl hexo blog",
+  "keywords": [
+    "biggirl",
+    "blog"
+  ],
+  "dependencies": {
+    "express": "*",
+    "gulp": "*",
+    "gulp-minify-css": "*",
+    "gulp-jshint": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "gulp-clean":"*"
+  },
+  "devDependencies": {
+
+
+  }
+}
