@@ -12,10 +12,7 @@
     "gulp-jshint": "*",
     "gulp-uglify": "*",
     "gulp-concat": "*",
-    "gulp-clean":"*"
+    "gulp-clean": "*"
   },
-  "devDependencies": {
-
-
-  }
+  "devDependencies": {}
 }
