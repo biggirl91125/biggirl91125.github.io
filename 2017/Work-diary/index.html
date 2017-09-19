@@ -88,13 +88,13 @@
                     <li><router-link  to="./works" class="aHref" >作品链接</router-link></li>
                     <li><router-link  to="./vue" class="aHref" >初学Vue.js</router-link></li>
                     <li><router-link  to="./webview" class="aHref" >前端js与webview交互</router-link></li>
-                    <li><a  class="aHref" href="./脚踏实地/ECMAScript-with语句被弃用？.html">ECMAScript-with语句被弃用</a></li>
-                    <li><a  class="aHref" href="./脚踏实地/DOM2样式API.html">DOM2样式API</a></li>
-                    <li><a  class="aHref" href="./脚踏实地/学好事件，走遍前端都不怕.html">事件</a></li>
-                    <li><a  class="aHref" href="./脚踏实地/编码规范之HTML.html">编码规范之HTML</a></li>
-                    <li><a  class="aHref" href="./那些年我们用过的框架/MVC设计模式.html">MVC设计模式</a></li>
-                    <li><a  class="aHref" href="./Node/windows下node和npm升级.html">windows下node和npm升级</a></li>
-                    <li><a  class="aHref" href="./反向代理.html">反向代理</a></li>
+                    <li><router-link  to="./eswith" class="aHref" >ECMAScript-with语句被弃用</router-link></li>
+                    <li><router-link  to="./domAPI" class="aHref" >DOM2样式API</router-link></li>
+                    <li><router-link  to="./event" class="aHref" >事件</router-link></li>
+                    <li><router-link  to="./htmlSt" class="aHref" >编码规范之HTML</router-link></li>
+                    <li><router-link  to="./mvc" class="aHref" >MVC设计模式</router-link></li>
+                    <li><router-link  to="./nodeUp" class="aHref" >windows下node和npm升级</router-link></li>
+                    <li><router-link  to="./proxy" class="aHref" >反向代理</router-link></li>
 
                 </ul>
             </div>
@@ -143,12 +143,26 @@
             var works={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./work.html"></iframe>'};
             var vue={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./那些年我们用过的框架/初学Vue-js.html"></iframe>'};
             var webview={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./移动端开发那些坑儿/前端js与webview交互.html"></iframe>'};
+            var eswith={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./脚踏实地/ECMAScript-with语句被弃用.html"></iframe>'};
+            var domAPI={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./脚踏实地/DOM2样式API.html"></iframe>'};
+            var event={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./脚踏实地/学好事件，走遍前端都不怕.html"></iframe>'};
+            var htmlSt={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./脚踏实地/编码规范之HTML.html"></iframe>'};
+            var mvc={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./那些年我们用过的框架/MVC设计模式.html"></iframe>'};
+            var nodeUp={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./Node/windows下node和npm升级.html"></iframe>'};
+            var proxy={template:'<iframe frameborder=0 scrolling="no" width="100%" height="100%" src="./反向代理.html"></iframe>'};
 
             var routes=[
                 {path:'/2017/Work-diary/',component:index},
                 {path:'/2017/Work-diary/works',component:works},
                 {path:'/2017/Work-diary/vue',component:vue},
-                {path:'/2017/Work-diary/webview',component:webview}
+                {path:'/2017/Work-diary/webview',component:webview},
+                {path:'/2017/Work-diary/with',component:eswith},
+                {path:'/2017/Work-diary/domapi',component:domAPI},
+                {path:'/2017/Work-diary/event',component:event},
+                {path:'/2017/Work-diary/htmlSt',component:htmlSt},
+                {path:'/2017/Work-diary/mvc',component:mvc},
+                {path:'/2017/Work-diary/nodeUp',component:nodeUp},
+                {path:'/2017/Work-diary/proxy',component:proxy}
             ];
             var router=new VueRouter({
                 mode:'history',//h5 history模式，path更简洁美观
