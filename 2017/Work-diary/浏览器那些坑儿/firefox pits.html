@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firefox的坑儿</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Judy's blog">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="你可以是任何人，但你就是你，程序媛的鸡汤" />
+    <meta name="keywords" content="IT,博客,鸡汤" />
+    <link rel="stylesheet" href="/css/src/all.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/src/prior.css" media="screen" type="text/css">
+    <script src="/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div id="sb-site">
+<!-- ============================ Header & Logo bar =========================== -->
+
+<!-- ============================ Header & Logo bar =========================== -->
+<article  class="clearfix">
+    <section id="intro">
+        <div class="container">
+            <div class="row col-md-offset-2">
+                <p class="col-md-8">
+                    <h2>火狐浏览器缓存input问题</h2>
+                    <span class="post-meta"><time datetime="2017-10-31T14:20:04.000Z" itemprop="datePublished">2017-10-31</time></span>
+                    <p>前端开发时，经常会遇到静态资源缓存问题。通常，说到静态资源，我们想到的是CSS和JS，清理缓存时也只是针对CSS和JS，html也是存在缓存的。</p>
+                    <p>最近，在火狐上测试页面时出现了input标签内容在页面刷新（reload）后仍保留原来的值情况，但是，强制刷新页面后，又没有内容了，其他浏览器就没有此种情况。这是因为，火狐会自动保存表单内容，对输入框、选项框、勾选框等表单内容在刷新后仍保留。</p>
+                    <p>解决火狐缓存表单内容的问题，可以使用以下方法，但具体</p>
+                    <h3>1、input autocomplete</h3>
+                    <p>
+                        如果是input标签，可以设置autocomplete属性为off,阻止Firefox默认的缓存机制。autocompete是H5新增属性，可能对于低版本浏览器会有兼容性问题，这个我没有测试。
+                    </p>
+                    <h3>2、head标签meta </h3>
+                    <p>在html页面head中添加以下脚本：</p>
+                    <p>
+                        <div class="code-area">
+                            <ol class="code">
+                                <li><meta http-equiv="pragma" content="no-cache"></li>
+                                <li><meta http-equiv="cache-control" content="no-cache"></li>
+                                <li><meta http-equiv="expires" content="0"></li>
+                            </ol>
+                        </div>
+                    </p>
+                    <p>如果是jsp页面的话，可以在html页面head中添加以下脚本：</p>
+                    <p>
+                        <div class="code-area">
+                            <ol class="code">
+                                <li><%</li>
+                                <li>response.setHeader("Cache-Control","no-cache");</li>
+                                <li>response.setHeader("Pragma","no-cache");</li>
+                                <li>response.setDateHeader ("Expires", 0);</li>
+                                <li>%></li>
+                            </ol>
+                        </div>
+                    </p>
+                    <p>但是，这种要注意的是，head中禁用缓存后，是对整个页面的缓存有效，不在只是针对input。如果你的页面资源文件多、请求多，不宜对整个页面禁用缓存，这样会增加服务器的负载。</p>
+
+                </div>
+                <div class="individual-right">
+                    <div class="calendar-widget">
+
+                    </div>
+                    <div class="blossom-widget">
+                        <canvas id="canvasGL" width="" height=""></canvas>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+            <nav class="pagination" role="pagination">
+
+                <a class="pull-left" href="/2017/Chicken-soup/我亦飘零久.html" style="float: left;">
+                    ← 我亦飘零久
+                </a>
+
+
+            </nav>
+
+        </div>
+    </section>
+
+</article>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+        (function(){
+            console.log('font');
+            var getCss = function(path) {
+                var head = document.getElementsByTagName('head')[0];
+                link = document.createElement('link');
+                link.href = path;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                head.appendChild(link);
+            };
+            getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+            getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+        })();
+    });
+</script>
+</body>
+</html>

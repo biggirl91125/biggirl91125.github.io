@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ie8/9的那些坑儿</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Judy's blog">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="你可以是任何人，但你就是你，程序媛的鸡汤" />
+    <meta name="keywords" content="IT,博客,鸡汤" />
+    <link rel="stylesheet" href="/css/src/all.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/src/prior.css" media="screen" type="text/css">
+    <script src="/js/jquery-1.11.1.min.js"></script>
+</head>
+<body id="index" class="lightnav" contenteditable="true">
+<div id="sb-site">
+    <!-- ============================ Header & Logo bar =========================== -->
+
+    <!-- ============================ Header & Logo bar =========================== -->
+    <article  class="clearfix">
+        <section id="intro">
+            <div class="container">
+                <div class="row col-md-offset-2">
+                    <div class="col-md-8">
+                        <h2>ie8/9的那些坑儿</h2>
+                        <span class="post-meta"><time datetime="2017-09-19T10:00:04.000Z" itemprop="datePublished">2017-09-19</time></span>
+                        <p>给ie8跪了。。。</p>
+                        <p>最近测网站首页时，出现了IE8下样式错乱、弹窗随滚动闪烁&数据加载不出来的问题，其他浏览器是没有问题的，花了一天时间解决这些问题，也是醉醉的。</p>
+                        <h3>1、ie8/9下样式错乱</h3>
+                        <p>
+                            样式错乱的情况，一般是IE浏览器渲染选择的是混杂模式(quriks mode)，而不是标准模式。这时候，你可以通过IE开发者工具切换一下标准模式，显示正常则说明文档模式存在问题。确定问题之后，就要找出导致问题的原因了。我们的html页中负责告诉浏览器渲染模式的标志是<!DOCTYPE>,即文档类型声明，位于页面最开始的位置。如果你的页面是jsp,也要将<!DOCTYPE html>放在起始位置,如果放在page指令设置的编码方式之后，ie8下还是会导致样式错乱。
+                        </p>
+                        <h3>2、ie8下弹窗闪烁</h3>
+                        <p>
+                            同样的代码，线上没有问题，测试环境有问题，至今还没找到原因。
+                        </p>
+                        <h3>3、ie8/9下数据加载不出来</h3>
+                        <p>
+                            我遇到的情况是console一直报错undefined,页面内容也加载不出来，只是页面加了几个console调试语句啊，心灵受到一万点伤害，去掉console之后，问题就解决了，原因见参考，ie8不支持console，报错，整个js挂掉，导致内容没有。
+                        </p>
+                        <p>参考:<a class="aHref" href="http://www.cnblogs.com/joyeecheung/p/3935444.html">ie8/9的几个前端bug解决方案</a></p>
+
+                    </div>
+                    <div class="individual-right">
+                        <div class="calendar-widget">
+
+                        </div>
+                        <div class="blossom-widget">
+                            <canvas id="canvasGL" width="" height=""></canvas>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="clearfix"></div>
+                    <hr class="nogutter">
+                </div>
+                <nav class="pagination" role="pagination">
+
+                    <a class="pull-left" href="/2017/Chicken-soup/我亦飘零久.html" style="float: left;">
+                        ← 我亦飘零久
+                    </a>
+
+
+                </nav>
+
+            </div>
+        </section>
+
+    </article>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+        (function(){
+            console.log('font');
+            var getCss = function(path) {
+                var head = document.getElementsByTagName('head')[0];
+                link = document.createElement('link');
+                link.href = path;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                head.appendChild(link);
+            };
+            getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+            getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+        })();
+    });
+</script>
+</body>
+</html>

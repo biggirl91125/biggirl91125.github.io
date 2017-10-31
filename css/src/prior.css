@@ -37,7 +37,7 @@ p img.img-w4{float:left;width:40%;padding:10px;}
 .zootopia,.blossom{float:left;width:100%;height:5000px;overflow-y:scroll;padding-left:250px;padding-top:0;}
 .zootopia::-webkit-scrollbar{display:none;}
 .blossom::-webkit-scrollbar{display:none;}
-.profile{float:left;width:250px;padding:0 30px;margin-left:-100%;border-right:1px solid #666;}
+.profile{float:left;width:250px;padding:0 30px;margin-left:-100%;border-right:1px solid #666;position:relative;z-index:99;}
 p.line-en{margin:0;font-size:16px;}
 p.line-cn{font-size:16px;}
 .avatar{width:150px;height:150px;margin:0 auto;}
