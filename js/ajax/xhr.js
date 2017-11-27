@@ -155,5 +155,16 @@ function createCORSRequest(method,url){
 
     return xhr;
 }
+/**
+ * 其他跨域技术
+ */
+//get && 无法访问服务器响应文本
+function pingImage(){
+    var img=new Image();
+    img.onload=img.onerror=function(){
+        console.log('done');
+    };
+    img.src='';//ping地址url
+}
 
 
